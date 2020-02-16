@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset ="utf-8">
+  <link rel="stylesheet" type="text/css" href="exerciseb.css">
+  <title></title>
+</head>
+<body>
+
+  <style type='text/css'>
+
+  #my-grid {
+    display: grid;
+    grid-template-rows: 15rem 15rem 15rem;
+    grid-template-columns: 15rem 15rem 15rem;
+    border: solid 1px black;
+    width: max-content;
+    overflow:hidden;
+  }
+  #box-1 {
+    grid-column: 1 ;
+    grid-row: 1 ;
+    background-color: green;
+    justify-content: 15rem;
+    overflow: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap
+    font-family:courier;
+  }
+  #box-2{
+    grid-column: 2 / 3 ;
+    grid-row: 2 / 3;
+    background-color: pink;
+  }
+  #box-3{
+    grid-column: 3/4;
+    grid-row:3/4;
+    background-color:pink;
+    overflow:auto;
+  }
+  #ball{
+    position:relative;
+    left:40%;
+    top:40%;
+    height:50px;
+    width:50px;
+    border-radius: 2em;
+    background-color:red;
+    animation:bounce 1.5s ease-in-out infinite;
+  }
+  #image{
+    overflow: hidden;
+    font-family:courier;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position:relative;
+
+  }
+  @keyframes bounce{
+    0%{transform:translateY(0px);}
+    30%{transform:translateY(-250px);}
+    75%{transform:translateY(20px);}
+    100%{transform:translateY(0px);}
+  }
+  </style>
+
+  <div id="my-grid">
+    <div id="box-1">
+      <p><span style="font-family: courier;font-size:0.8em;word-spacing: 0.1em"><span style="font-weight: bold; text-align: center">The Answer</span><br>
+          Baseness is a passport for the base,<br>
+          Honour an epitaph for the honourable.<br>
+          See how the gilded sky teems<br>
+          With the twisted shadows of the dead.<br>
+          The ice age is over,<br>
+          So why does ice still bind the world?<br>
+          The Cape of Good Hope has been discovered,<br>
+          So why is the Dead Sea still thick with sails?<br>
+          I come into this world<br>
+          Carrying only paper, rope and a shadow,<br>
+          To proclaim before judgment is passed<br>
+          This plea of the judged:<br>
+          Listen to me, world,<br>
+          I ! do ! not ! believe!<br>
+          If a thousand challengers lie beneath your feet<br>
+          Then I am number one thousand and one.<br>
+          I do not believe the sky is blue;<br>
+          I do not believe the thunder’s roar;<br>
+          I do not believe that dreams are false;<br>
+          I do not believe that death has no revenge.<br>
+          If the ocean is destined to break the dike;<br>
+          Then let its bitter water pour into my soul;<br>
+          If the land is destined to rise,<br>
+          Then let mankind choose a new mountain for survival.<br>
+          The vast unobstructed firmament<br>
+          Is it with glimmering stars;<br>
+          They are a new turning:<br>
+          These hieroglyphs of the ages,<br>
+          These staring eyes of the future.<br></span></p>
+    </div>
+    <div id="box-2">
+      <div id="ball"></div>
+    </div>
+    <div id="box-3">
+      <div id="image">
+        <img src="https://fsa.zobj.net/crop.php?r=gjgRmFvG-UL4jDeyYluFfNZxGc4NFtzUgEJFJ2_QmSTVjFdcdk-FwFgsYIflH_3ik-7n8vVKACBPthZEUERBLJO1x0PN6taG87mMCDmE1k9QsnReb55lkRJwPnTxd45OgvF_NwGtLxQEg3Gx" height=100% width=100%>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
