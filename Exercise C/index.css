@@ -1,0 +1,19 @@
+html {
+  font-size: 3em;
+  font-family: helvetica;
+  color:pink;
+  background-color:black;
+}
+
+.input-wrapper {
+  display: flex;
+  margin: 1.5rem 0 3rem 0;
+}
+
+input {
+  width: 100%;
+}
+
+.sentence {
+  height: 3.5rem;
+}
