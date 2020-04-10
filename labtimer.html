@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Irene & Cassie</title>
+  <style>
+    <html>{
+    background-color:#E83015;
+  }
+    @media(max-width: 430px) {
+      body{
+        font-size:62.5%;
+        background-color:#E83015;
+      }
+      .paper{
+        margin-left:.2vw;
+        margin-right:.5vw;
+      }
+
+     .para_one {
+      font-size: 0.1em;
+    }
+    }
+    .one{
+      position:absolute;
+    }
+    .para_one{
+      position:relative;
+      font-family: courier prime;
+      font-size:1.3em;
+      line-height: 1.4em;
+      font-weight:100;
+      margin: 5em 17vw 5em 21vw;
+      z-index: 1;
+   }
+    #digitalclock{
+      background-color:#E83015;
+      position: relative;
+      font-family: helvetica;
+      font-size: 10em;
+      text-align:center;
+      color: black;
+      z-index: 0;
+      font-style:italic;
+      max-width: 5em;
+      color:white;
+      font-weight: 900;
+      min-width: 86vw;
+      width: 88vw;
+      margin: 20% auto;
+    }
+    .paper{
+      width:95vw;
+      /*box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);*/
+      position:absolute;
+      margin: 2em 2vw 0em 2vw;
+     
+    }
+    #number{
+      font-family: courier prime; 
+      font-size: 2em; 
+      color:#b80000;
+      position:absolute;
+      margin-top:1em;
+      z-index:20;
+      font-weight:600;
+      text-align: center;
+      min-width: 83vw;
+      float:right;
+      text-align: right;
+      width: 85vw;
+      margin: 0.8em 0em 0.5em 1em;
+    }
+    .nav{
+      position:relative;
+      font-family: courier prime;
+      font-size:1.2em;
+      line-height: 1em;
+      font-weight:100;
+      margin-top:8.5em;
+      margin-left:11vw;
+      width:5.5em;
+      z-index: 50;
+    }
+    #file{
+      padding:.2em;
+    }
+    #file:hover{
+      background-color: lightgrey;
+    }
+    .search{
+      position: absolute;
+      line-height: 2.89em;
+      margin-left: 15vw;
+      padding-left: 5em;
+      margin-top: -26.5em;
+    }
+    .footer{
+      position:relative;
+      font-family: courier prime;
+      font-size:1em;
+      line-height: 1.2em;
+      font-weight:100;
+      margin: 0em 11vw 2em 11vw;
+      z-index: 1;
+    }
+    #header{
+      color: #b80000;
+      position: absolute;
+      font-family: courier prime;
+      font-size: 1.2em;
+      line-height: 1.2em;
+      font-weight: 300;
+      float: right;
+      text-align: right;
+      z-index: 20;
+      font-weight: 600;
+      margin: 7em 8vw 0.5em 58vw;
+    }
+    .side{
+      font-size: 1.2em;
+      position: absolute;
+      margin: 51.5em 0vh 0vh 12.1vw;
+      display: inline-block;
+      font-family: courier prime;
+      transform: rotate(-90deg);
+      transform-origin: left;
+      line-height: 1.2em;
+      z-index: 60;
+    }
+  </style>
+</head>
+<body>
+  
+
+       <div id="digitalclock" class="clock"></div>
+      <script type="text/javascript">
+    
+      function showTime(){
+        var date = new Date();
+        var h = date.getHours();      // hour (0-23)
+        var m = date.getMinutes();       // minute (0-59)
+        var s = date.getSeconds();       // second (0-59)
+        // var session = "AM";
+        if(h == 0){
+          h = 12;
+        }
+        if(h > 12){
+          h = h - 12;
+          // var session = "PM";
+        }
+        if(m > 30){
+        var session = "lock";
+        }
+        if(m < 30){
+        var session = "unlock";
+        }
+        // if(h == 2,3,5,6,8,9,11,12,14,15,17,18,20,21,23,24){
+        //   var session = "unlock1";
+        // }
+      
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+
+        var time = h + ":" + m + ":" + s + " ";
+        document.getElementById("digitalclock").innerText = time;
+        document.getElementById("digitalclock").textContent = time; 
+
+        console.log(time);
+
+        setTimeout(showTime, 1000);
+    
+
+        if(session == "unlock1"){
+          console.log("unlock1");
+          document.getElementById("hide").style.backgroundColor = "white";
+        }
+
+        if(session == "lock"){
+            console.log("lock");
+            document.getElementById("hide").style.backgroundColor = "black";
+            document.getElementById("hide1").style.backgroundColor = "black";
+            document.getElementById("hide2").style.backgroundColor = "black";
+            document.getElementById("hide3").style.backgroundColor = "black";
+            document.getElementById("hide4").style.backgroundColor = "black";
+            document.getElementById("hide5").style.backgroundColor = "black";
+            document.getElementById("hide6").style.backgroundColor = "black";
+            document.getElementById("hide7").style.backgroundColor = "black";
+            document.getElementById("hide8").style.backgroundColor = "black";
+            document.getElementById("hide9").style.backgroundColor = "black";
+            document.getElementById("hide10").style.backgroundColor = "black";
+            document.getElementById("hide11").style.backgroundColor = "black";
+            document.getElementById("hide12").style.backgroundColor = "black";
+            document.getElementById("hide13").style.backgroundColor = "black";
+            document.getElementById("hide14").style.backgroundColor = "black";
+            document.getElementById("hide15").style.backgroundColor = "black";
+            document.getElementById("hide16").style.backgroundColor = "black";
+            document.getElementById("hide17").style.backgroundColor = "black";
+            document.getElementById("hide18").style.backgroundColor = "black";
+            document.getElementById("hide19").style.backgroundColor = "black";
+            document.getElementById("hide20").style.backgroundColor = "black";
+            document.getElementById("hide21").style.backgroundColor = "black";
+            document.getElementById("hide22").style.backgroundColor = "black";
+            document.getElementById("hide23").style.backgroundColor = "black";
+            document.getElementById("hide24").style.backgroundColor = "black";
+            document.getElementById("hide25").style.backgroundColor = "black";
+            document.getElementById("hide26").style.backgroundColor = "black";
+            document.getElementById("hide27").style.backgroundColor = "black";
+            document.getElementById("hide28").style.backgroundColor = "black";
+            document.getElementById("hide29").style.backgroundColor = "black";
+            document.getElementById("hide30").style.backgroundColor = "black";
+            document.getElementById("hide31").style.backgroundColor = "black";
+            document.getElementById("hide32").style.backgroundColor = "black";
+            document.getElementById("hide33").style.backgroundColor = "black";
+            document.getElementById("hide34").style.backgroundColor = "black";
+            document.getElementById("hide35").style.backgroundColor = "black";
+            document.getElementById("hide36").style.backgroundColor = "black";
+            document.getElementById("hide37").style.backgroundColor = "black";
+            document.getElementById("hide38").style.backgroundColor = "black";
+            document.getElementById("hide39").style.backgroundColor = "black";
+            document.getElementById("hide40").style.backgroundColor = "black";
+            document.getElementById("hide41").style.backgroundColor = "black";
+            document.getElementById("hide42").style.backgroundColor = "black";
+            document.getElementById("hide43").style.backgroundColor = "black";
+            document.getElementById("hide44").style.backgroundColor = "black";
+            document.getElementById("hide45").style.backgroundColor = "black";
+            document.getElementById("hide46").style.backgroundColor = "black";
+            document.getElementById("hide47").style.backgroundColor = "black";
+            document.getElementById("hide48").style.backgroundColor = "black";
+            document.getElementById("hide49").style.backgroundColor = "black";
+            document.getElementById("hide50").style.backgroundColor = "black";
+            document.getElementById("hide51").style.backgroundColor = "black";
+            document.getElementById("hide52").style.backgroundColor = "black";
+            document.getElementById("hide53").style.backgroundColor = "black";
+            document.getElementById("hide54").style.backgroundColor = "black";
+            document.getElementById("hide55").style.backgroundColor = "black";
+            document.getElementById("hide56").style.backgroundColor = "black";
+            document.getElementById("hide57").style.backgroundColor = "black";
+            document.getElementById("hide58").style.backgroundColor = "black";
+            document.getElementById("hide59").style.backgroundColor = "black";
+            document.getElementById("hide60").style.backgroundColor = "black";
+            document.getElementById("hide61").style.backgroundColor = "black";
+          }
+
+
+      }
+
+        showTime();
+
+
+        document.getElementById("text1").value = getSavedValue("text1");
+        document.getElementById("text2").value = getSavedValue("text2");
+        document.getElementById("text3").value = getSavedValue("text3");
+        document.getElementById("text4").value = getSavedValue("text4");
+        document.getElementById("text5").value = getSavedValue("text5");
+        document.getElementById("text6").value = getSavedValue("text6");
+        document.getElementById("text7").value = getSavedValue("text7");
+        document.getElementById("text8").value = getSavedValue("text8");
+        document.getElementById("text9").value = getSavedValue("text9");
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+        
+
+       
+
+        // if(session = "LOCKED2"){
+        //   console.log("LOCKED2");
+        //   document.getElementById("hide").style.backgroundColor = "white";
+        // }
+
+       
+    </script>
+    
+    </div>
+   
+  </div>
+</body>
+</html>
